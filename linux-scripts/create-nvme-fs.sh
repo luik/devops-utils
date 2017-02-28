@@ -9,6 +9,8 @@ p
 w
 EOF
 
+sleep 3
+
 sudo mkfs.ext4 /dev/nvme0n1p1 <<EOF
 y
 EOF
