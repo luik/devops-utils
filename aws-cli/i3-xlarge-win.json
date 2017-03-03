@@ -1,0 +1,27 @@
+{
+    "ImageId": "ami-1562d075",
+    "InstanceType": "i3.xlarge",
+    "KeyName": "keys",
+    "Placement" : {
+        "AvailabilityZone" : "us-west-2c"
+    },
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+          "DeleteOnTermination": true,
+          "VolumeType": "gp2",
+          "VolumeSize": 50,
+          "SnapshotId": "snap-72da6555"
+        }
+      }
+    ],
+    "NetworkInterfaces" : [
+      {
+        "DeviceIndex": 0,
+        "SubnetId": "subnet-08a1e550",
+        "AssociatePublicIpAddress": true,
+        "Groups": ["sg-b2f18ad6"]
+      }
+    ]
+}
