@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # https://hub.docker.com/r/rayyildiz/java8/~/dockerfile/
 

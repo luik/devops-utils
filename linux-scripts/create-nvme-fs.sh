@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo fdisk /dev/nvme0n1 <<EOF
 n
