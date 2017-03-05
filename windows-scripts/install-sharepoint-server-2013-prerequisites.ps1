@@ -6,7 +6,6 @@
 #(new-object System.Net.WebClient).DownloadFile('https://download.microsoft.com/download/4/2/A/42A19755-CBA5-4090-A6B8-8F7DA482114C/Windows8-RT-KB2771431-x64.msu','D:\tmp\Windows8-RT-KB2771431-x64.msu')
 #D:\tmp\Windows8-RT-KB2771431-x64.msu
 
-
 Import-Module ServerManager
 
 Copy-Item -Path "$($ENV:SystemRoot)\System32\ServerManager.exe" `
