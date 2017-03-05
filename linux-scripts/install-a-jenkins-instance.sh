@@ -84,7 +84,7 @@ cd \$CURRENT_DIR
 EOM
 
 sudo mv jenkins_${JENKINS_POSTFIX}.ini /etc/init.d/jenkins_${JENKINS_POSTFIX}
-sudo chmod +x jenkins_${JENKINS_POSTFIX}
+sudo chmod +x /etc/init.d/jenkins_${JENKINS_POSTFIX}
 sudo update-rc.d jenkins_${JENKINS_POSTFIX} defaults 82
 sudo service jenkins_${JENKINS_POSTFIX} start
 
