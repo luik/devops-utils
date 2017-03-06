@@ -12,7 +12,12 @@ cd /media/nvme1/data
 sudo mv /var/lib/mysql .
 sudo chown mysql:mysql mysql
 
-sudo sed -i "s/\/var\/lib\/mysql/\/media\/nvme1\/data\/mysql/" /etc/mysql/mysql.conf.d/mysqld.cnf
+if [ -f /etc/mysql/mysql.conf.d/mysqld.cnf ]; then
+    sudo sed -i "s/\/var\/lib\/mysql/\/media\/nvme1\/data\/mysql/" /etc/mysql/mysql.conf.d/mysqld.cnf
+fi
+if [ -f /etc/mysql/my.cnf ]; then
+    sudo sed -i "s/\/var\/lib\/mysql/\/media\/nvme1\/data\/mysql/" /etc/mysql/my.cnf
+fi
 sudo sed -i "s/\/var\/lib\/mysql\//\/media\/nvme1\/data\/mysql\//" /etc/apparmor.d/usr.sbin.mysqld
 
 #fix for init script error on ubuntu server 16.04
@@ -24,5 +29,3 @@ sudo service apparmor restart
 sudo service mysql start
 
 echo ${MYSQL_PASSWORD}
-
-
