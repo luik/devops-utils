@@ -7,6 +7,18 @@ New-ADUser -SamAccountName spadmin `
 -Surname "admin" `
 -Path 'CN=Users,DC=domain,DC=milkneko,DC=com'
 
-
 Add-ADGroupMember Administrators spadmin
+
+
+New-ADUser -SamAccountName sqlserveradmin `
+-Name "sqlserveradmin" `
+-UserPrincipalName sqlserveradmin@domain.milkneko.com `
+-AccountPassword (ConvertTo-SecureString -AsPlainText "Contrasena32!" -Force) `
+-Enabled $true -PasswordNeverExpires $true `
+-GivenName "sqlserver"
+-Surname "admin" `
+-Path 'CN=Users,DC=domain,DC=milkneko,DC=com'
+
+Add-ADGroupMember Administrators sqlserveradmin
+
 

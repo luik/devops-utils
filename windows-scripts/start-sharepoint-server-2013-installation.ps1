@@ -6,4 +6,7 @@ E:\splash.hta
 
 start "Launch SharePoint preparation tool" "E:\prerequisiteinstaller.exe" /continue
 
+Add-PsSnapin Microsoft.SharePoint.PowerShell
 $SearchService = Get-Credential $env:computername\Administrator
+New-SPManagedAccount -Credential $SearchService
+
