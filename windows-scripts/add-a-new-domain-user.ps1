@@ -22,3 +22,14 @@ New-ADUser -SamAccountName sqlserveradmin `
 Add-ADGroupMember Administrators sqlserveradmin
 
 
+New-ADUser -SamAccountName exchangeadmin `
+-Name "exchangeadmin" `
+-UserPrincipalName exchangeadmin@domain.milkneko.com `
+-AccountPassword (ConvertTo-SecureString -AsPlainText "Contrasena32!" -Force) `
+-Enabled $true -PasswordNeverExpires $true `
+-GivenName "exchange"
+-Surname "admin" `
+-Path 'CN=Users,DC=domain,DC=milkneko,DC=com'
+
+Add-ADGroupMember Administrators exchangeadmin
+
