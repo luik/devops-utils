@@ -3,9 +3,9 @@
 # https://hub.docker.com/r/rayyildiz/java8/~/dockerfile/
 
 JAVA_VERSION=8
-JAVA_UPDATE=121
-JAVA_BUILD=13
-JAVA_TOKEN=e9e7ea248e2c4826b92b3f075a80e441
+JAVA_UPDATE=131
+JAVA_BUILD=11
+JAVA_TOKEN=d54c1d3a095b4ff2b6607d096fa80163
 
 cd /tmp
 curl -O -L -H "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/${JAVA_TOKEN}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz"
