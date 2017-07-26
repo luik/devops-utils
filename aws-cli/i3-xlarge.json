@@ -1,5 +1,5 @@
 {
-    "ImageId": "ami-8d22a2ed",
+    "ImageId": "ami-a8657fd1",
     "InstanceType": "i3.xlarge",
     "KeyName": "keys",
     "Placement" : {
