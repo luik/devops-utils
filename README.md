@@ -1,3 +1,7 @@
+# AMI locator
+
+http://cloud-images.ubuntu.com/locator/ec2/
+
 # devops-utils
 
 You can use for example a script with the command
