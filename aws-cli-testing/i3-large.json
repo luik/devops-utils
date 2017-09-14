@@ -1,0 +1,26 @@
+{
+    "ImageId": "ami-a8657fd1",
+    "InstanceType": "i3.large",
+    "KeyName": "testing",
+    "Placement" : {
+        "AvailabilityZone" : "us-west-2c"
+    },
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+          "DeleteOnTermination": true,
+          "VolumeType": "gp2",
+          "VolumeSize": 10
+        }
+      }
+    ],
+    "NetworkInterfaces" : [
+      {
+        "DeviceIndex": 0,
+        "SubnetId": "subnet-08a1e550",
+        "AssociatePublicIpAddress": true,
+        "Groups": ["sg-502cf628"]
+      }
+    ]
+}
