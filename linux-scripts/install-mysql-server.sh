@@ -29,3 +29,4 @@ sudo service apparmor restart
 sudo service mysql start
 
 echo ${MYSQL_PASSWORD}
+echo ${MYSQL_PASSWORD} >> /media/nvme1/data/mysql-pass
