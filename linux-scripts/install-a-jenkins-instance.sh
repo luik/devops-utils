@@ -3,18 +3,21 @@
 JENKINS_POSTFIX=$1
 JENKINS_PORT=$2
 JENKINS_DOMAIN=$3
+JENKINS_DATA_FOLDER=$4
 
-if [ "$#" -ne 3 ]; then
+if [ "$#" -ne 4 ]; then
     read -p "Postfix: " jenkins_postfix
     read -p "Port: " jenkins_port
     read -p "Domain: " jenkins_domain
+    read -p "Data folder('ex. /media/nvme1/data'):" jenkins_data_folder
 
     JENKINS_POSTFIX=${jenkins_postfix}
     JENKINS_PORT=${jenkins_port}
     JENKINS_DOMAIN=${jenkins_domain}
+    JENKINS_DATA_FOLDER=${jenkins_data_folder}
 fi
 
-cd /media/nvme1/data/
+cd ${JENKINS_DATA_FOLDER}
 
 curl -O -L http://mirrors.jenkins-ci.org/war/latest/jenkins.war
 mkdir jenkins_${JENKINS_POSTFIX}
