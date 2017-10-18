@@ -19,7 +19,7 @@ fi
 
 cd ${JENKINS_DATA_FOLDER}
 
-curl -O -L http://mirrors.jenkins-ci.org/war/latest/jenkins.war
+curl -O -L http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 mkdir jenkins_${JENKINS_POSTFIX}
 mv jenkins.war jenkins_${JENKINS_POSTFIX}
 cd jenkins_${JENKINS_POSTFIX}
