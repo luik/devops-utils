@@ -16,7 +16,7 @@ y
 EOF
 
 sudo mkdir /media/nvme1
-sudo mount /dev/nvme0n1p1 /media/nvme1
+sudo mount /dev/nvme1n1p1 /media/nvme1
 sudo mkdir /media/nvme1/data
 sudo chown ubuntu:ubuntu /media/nvme1/data
 
