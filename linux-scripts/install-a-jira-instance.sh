@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-JIRA_VERSION="7.3.2"
-MYSQL_DRIVER_VERSION="5.1.41"
+JIRA_VERSION="7.1.10"
+MYSQL_DRIVER_VERSION="8.0.18"
 
 JIRA_POSTFIX=$1
 JIRA_PORT=$2
@@ -31,7 +31,7 @@ mkdir jira_home
 curl -O -L https://cdn.mysql.com//Downloads/Connector-J/mysql-connector-java-${MYSQL_DRIVER_VERSION}.tar.gz
 tar xf mysql-connector-java-${MYSQL_DRIVER_VERSION}.tar.gz
 rm mysql-connector-java-${MYSQL_DRIVER_VERSION}.tar.gz
-cp mysql-connector-java-${MYSQL_DRIVER_VERSION}/mysql-connector-java-${MYSQL_DRIVER_VERSION}-bin.jar ./atlassian-jira-software-${JIRA_VERSION}-standalone/lib
+cp mysql-connector-java-${MYSQL_DRIVER_VERSION}/mysql-connector-java-${MYSQL_DRIVER_VERSION}.jar ./atlassian-jira-software-${JIRA_VERSION}-standalone/lib
 rm -r mysql-connector-java-${MYSQL_DRIVER_VERSION}/
 
 mysql -u root -p${MYSQL_ROOT_PASSWORD} -e "CREATE DATABASE jira_${JIRA_POSTFIX} CHARACTER SET utf8 COLLATE utf8_bin"
