@@ -39,11 +39,24 @@ You should create folder `/media/nvme1/data` IE installing a jira:
     jira_j71_admin
     PCTmC4CtIgf5GJHm
 
+## Notes MySQL 5.6
 
+Sometimes is required have MySQL 5.6, an option is to use Docker, following is a template example
 
+    version: '3.1'
 
+    services:
 
-
-
+      db:
+        image: mysql:5.6
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        ports:
+            - 3306:3306
+        environment:
+          MYSQL_ROOT_PASSWORD: VkjFruG1b4i6MNuY
+          MYSQL_DATABASE: jira_j71
+          MYSQL_USER: jira_j71_admin
+          MYSQL_PASSWORD: PCTmC4CtIgf5GJHm
 
     
