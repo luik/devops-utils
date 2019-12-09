@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-JIRA_VERSION="7.3.2"
+JIRA_VERSION="7.6.17"
 MYSQL_DRIVER_VERSION="8.0.18"
 
 JIRA_POSTFIX=$1
