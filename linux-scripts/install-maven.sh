@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MAVEN_VERSION=3.6.2
+MAVEN_VERSION=3.6.3
 
 cd /tmp
 curl -O -L "http://www-eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz"
